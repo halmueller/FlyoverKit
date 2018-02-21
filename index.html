@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlyoverKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="FlyoverKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">FlyoverKit Docs</a> (98% documented)</p>
+        <p class="header-right"><a href="https://github.com/SvenTiigi/FlyoverKit"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">FlyoverKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        FlyoverKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/FlyoverCamera.html">FlyoverCamera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FlyoverCamera/RegionChangeAnimation.html">– RegionChangeAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FlyoverCamera/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FlyoverMapView.html">FlyoverMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FlyoverMapView/MapType.html">– MapType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FlyoverMapViewController.html">FlyoverMapViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/CLCircularRegion.html">CLCircularRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/CLLocationCoordinate2D.html">CLLocationCoordinate2D</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKCoordinateRegion.html">MKCoordinateRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKCoordinateSpan.html">MKCoordinateSpan</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKMapItem.html">MKMapItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKMapPoint.html">MKMapPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKMapRect.html">MKMapRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKMapView.html">MKMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewPropertyAnimator.html">UIViewPropertyAnimator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Flyover.html">Flyover</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='flyoverkit' class='heading'>FlyoverKit</h1>
+
+<p><a href="https://travis-ci.org/SvenTiigi/FlyoverKit"><img src="https://travis-ci.org/SvenTiigi/FlyoverKit.svg?branch=master" alt="Build Status"></a>
+<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat" alt="Swift 4.0"></a>
+<a href="http://cocoapods.org/pods/FlyoverKit"><img src="https://img.shields.io/cocoapods/v/FlyoverKit.svg?style=flat" alt="Version"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
+<a href="https://codebeat.co/projects/github-com-sventiigi-flyoverkit-master"><img src="https://codebeat.co/badges/c170aedf-d49e-4538-be5c-6c2819c8d7f4" alt="codebeat badge"></a>
+<a href="https://sventiigi.github.io/FlyoverKit"><img src="https://github.com/SvenTiigi/FlyoverKit/blob/gh-pages/badge.svg" alt="Documentation"></a>
+<a href="https://twitter.com/SvenTiigi/"><img src="https://img.shields.io/badge/Twitter-@SvenTiigi-blue.svg?style=flat" alt="Twitter"></a></p>
+
+<p><code>FlyoverKit</code> enables you to present stunning 360° flyover views in your iOS App with zero effot and 100% configuration options</p>
+<h2 id='example-application' class='heading'>Example Application</h2>
+
+<p>Try out the <code>FlyoverKitExample</code> application to see <code>FlyoverKit</code> in action and get a brief look of configuration options.</p>
+
+<p>In order to run the example Application you have to first generate the Frameworks via <code>Carthage</code>.</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>carthage update <span class="nt">--platform</span> iOS
+<span class="nv">$ </span>open FlyoverKit.xcodeproj
+</code></pre>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>STLocationRequest is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight shell"><code>pod <span class="s1">'FlyoverKit'</span>
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>brew update
+<span class="nv">$ </span>brew <span class="nb">install </span>carthage
+</code></pre>
+
+<p>To integrate STLocationRequest into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "SvenTiigi/FlyoverKit"
+</code></pre>
+
+<p>Run <code>carthage update --platform iOS</code> to build the framework and drag the built <code>FlyoverKit.framework</code> into your Xcode project. </p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p><code>FlyoverKit</code> comes with three ways to implement a flyover. Simply choose the most suitable type for your implementation. Please see the <code>Advanced</code> section in order to configure the <code>FlyoverKit</code> to your needs.</p>
+<h3 id='flyovercamera' class='heading'>FlyoverCamera</h3>
+
+<p>If you already have a <code>MKMapView</code> in your <code>Controller</code> and you want to add a flyover to this MapView, simply use the <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code>.</p>
+<pre class="highlight swift"><code><span class="c1">// Initialize the FlyoverCamera with a MKMapView</span>
+<span class="k">let</span> <span class="nv">flyoverCamera</span> <span class="o">=</span> <span class="kt">FlyoverCamera</span><span class="p">(</span>
+    <span class="nv">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span>
+<span class="p">)</span>
+
+<span class="c1">// Initialize a location</span>
+<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2DMake</span><span class="p">(</span><span class="mf">48.858370</span><span class="p">,</span> <span class="mf">2.294481</span><span class="p">)</span>
+
+<span class="c1">// Start flyover</span>
+<span class="n">flyoverCamera</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">flyover</span><span class="p">:</span> <span class="n">eiffelTower</span><span class="p">)</span>
+</code></pre>
+<h3 id='flyovermapview' class='heading'>FlyoverMapView</h3>
+
+<p>If you wish to show MapView which is already preconfigured to perform a flyover on a given location.</p>
+<pre class="highlight swift"><code><span class="c1">// Initialize the FlyoverMapView</span>
+<span class="k">let</span> <span class="nv">flyoverMapView</span> <span class="o">=</span> <span class="kt">FlyoverMapView</span><span class="p">()</span>
+
+<span class="c1">// Initialize a location</span>
+<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2DMake</span><span class="p">(</span><span class="mf">48.858370</span><span class="p">,</span> <span class="mf">2.294481</span><span class="p">)</span>
+
+<span class="c1">// Start flyover</span>
+<span class="n">flyoverMapView</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">flyover</span><span class="p">:</span> <span class="n">eiffelTower</span><span class="p">)</span>
+</code></pre>
+<h3 id='flyovermapviewcontroller' class='heading'>FlyoverMapViewController</h3>
+
+<p>If you wish to present a <code>UIViewController</code> with an embedded <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> to perform a flyover on a given location.</p>
+<pre class="highlight swift"><code><span class="c1">// Initialize a location</span>
+<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2DMake</span><span class="p">(</span><span class="mf">48.858370</span><span class="p">,</span> <span class="mf">2.294481</span><span class="p">)</span>
+
+<span class="c1">// Initialize the FlyoverMapViewController with a Flyover object</span>
+<span class="k">let</span> <span class="nv">controller</span> <span class="o">=</span> <span class="kt">FlyoverMapViewController</span><span class="p">(</span><span class="nv">flyover</span><span class="p">:</span> <span class="n">eiffelTower</span><span class="p">)</span>
+
+<span class="c1">// Present controller</span>
+<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">controller</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+<h2 id='advanced' class='heading'>Advanced</h2>
+
+<p>The <code>FlyoverKit</code> is based on a 4-layer architecture:</p>
+
+<ul>
+<li>Flyover</li>
+<li>FlyoverCamera</li>
+<li>FlyoverMapView</li>
+<li>FlyoverMapViewController</li>
+</ul>
+<h2 id='flyover' class='heading'>Flyover</h2>
+
+<p>The <code>flyover</code> protocol represents the base layer of the <code>FlyoverKit</code>. The protocol is used to perform a flyover on the given coordinate.</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Flyover</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The <code>FlyoverKit</code> already implemented this protocol to various MapKit and CoreLocation types like <code>CLLocationCoordinate2D</code>, <code>CLLocation</code>, <code>MKMapPoint</code>, <code>MKMapItem</code>, <code>MKCoordinateRegion</code> and many more.</p>
+
+<p>You can apply the <code><a href="Protocols/Flyover.html">Flyover</a></code> protocol to your own models to use them for a flyover.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Address</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span>
+<span class="p">}</span>
+<span class="kd">extension</span> <span class="kt">Address</span><span class="p">:</span> <span class="kt">Flyover</span> <span class="p">{}</span>
+</code></pre>
+<h2 id='flyovercamera' class='heading'>FlyoverCamera</h2>
+
+<p>The second layer the <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> is responsible for manipulating the orginal <code>MKMapView</code> camera and performs a 360° flyover animation via the <code>UIViewPropertyAnimator</code> class. </p>
+
+<p>In order to initialize a <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> object you need to pass a <code>MKMapView</code> (which reference will be weakly stored) and a <code><a href="Classes/FlyoverCamera/Configuration.html">FlyoverCamera.Configuration</a></code> object.</p>
+<pre class="highlight swift"><code><span class="c1">// Initialize FlyoverCamera configuration</span>
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">FlyoverCamera</span><span class="o">.</span><span class="kt">Configuration</span><span class="p">(</span>
+    <span class="nv">duration</span><span class="p">:</span> <span class="mf">4.0</span><span class="p">,</span>
+    <span class="nv">altitude</span><span class="p">:</span> <span class="mf">600.0</span><span class="p">,</span>
+    <span class="nv">pitch</span><span class="p">:</span> <span class="mf">45.0</span><span class="p">,</span>
+    <span class="nv">headingStep</span><span class="p">:</span> <span class="mf">20.0</span>
+<span class="p">)</span>
+
+<span class="c1">// Initialize FlyoverCamera</span>
+<span class="k">let</span> <span class="nv">camera</span> <span class="o">=</span> <span class="kt">FlyoverCamera</span><span class="p">(</span>
+    <span class="nv">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span>
+<span class="p">)</span>
+
+<span class="c1">// Start Flyover</span>
+<span class="n">camera</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">flyover</span><span class="p">:</span> <span class="n">location</span><span class="p">)</span>
+</code></pre>
+<h3 id='configuration' class='heading'>Configuration</h3>
+
+<p>The <code><a href="Classes/FlyoverCamera/Configuration.html">FlyoverCamera.Configuration</a></code> struct holds all specific flyover configuration values. Set the properties to get the right look and feel of the flyover as you need it to be.</p>
+
+<table><thead>
+<tr>
+<th>Configuration</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>duration</td>
+<td>The flyover animation duration</td>
+</tr>
+<tr>
+<td>altitude</td>
+<td>The altitude above the ground, measured in meters</td>
+</tr>
+<tr>
+<td>pitch</td>
+<td>The viewing angle of the camera, measured in degrees</td>
+</tr>
+<tr>
+<td>headingStep</td>
+<td>The direction step in degrees that is added to the MapViewCamera heading in each flyover iteration</td>
+</tr>
+<tr>
+<td>regionChangeAnimation</td>
+<td>The region change animation that should be applied if a flyover has been started and the MapCamera has to change the region. Default is always <code>.none</code> which immediately present the place. If you wish that the region change should be performed via an animation you can set <code>.animated(duration: 1.5, curve: .easeIn)</code></td>
+</tr>
+</tbody></table>
+
+<p>An excellent visualization of an <code>MKMapCamera</code> from <a href="http://www.techotopia.com/index.php/An_iOS_9_MapKit_Flyover_Tutorial">TechTopia</a></p>
+
+<p><img src="http://www.techotopia.com/images/5/5b/Ios_9_flyover_camera_diagram.png" alt=""></p>
+<h3 id='configuration-theme' class='heading'>Configuration Theme</h3>
+
+<p>If you don&rsquo;t want to set the properties yourself your can use a preconfigured configuration theme. Currently there are four themes available </p>
+
+<table><thead>
+<tr>
+<th>Theme</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>default</td>
+<td>Default flyover configuration with configuration for a default flyover usage</td>
+</tr>
+<tr>
+<td>lowFlying</td>
+<td>Flyover configuration with a low altitude and a high pitch. Simulates a low flying helicopter viewing angle</td>
+</tr>
+<tr>
+<td>farAway</td>
+<td>Configuration with a high altitude and a normal pitch which results in a far away viewing angle</td>
+</tr>
+<tr>
+<td>giddy</td>
+<td>A giddy configuration 🤢 which you shouldn&rsquo;t use in production. But it&rsquo;s fun 🤷‍♂️ 🤙</td>
+</tr>
+</tbody></table>
+
+<p>More themes coming soon&hellip; 👨‍💻</p>
+
+<p>Furthermore, you can initialize a <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> with a given <code>Theme</code>.</p>
+<pre class="highlight swift"><code><span class="c1">// Initialize FlyoverCamera</span>
+<span class="k">let</span> <span class="nv">camera</span> <span class="o">=</span> <span class="kt">FlyoverCamera</span><span class="p">(</span>
+    <span class="nv">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span>
+    <span class="nv">configurationTheme</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span>
+<span class="p">)</span>
+</code></pre>
+<h2 id='flyovermapview' class='heading'>FlyoverMapView</h2>
+
+<p><code>Coming soon</code></p>
+<h2 id='flyovermapviewcontroller' class='heading'>FlyoverMapViewController</h2>
+
+<p><code>Coming soon</code></p>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>Contributions are very welcome 🙌 🤓</p>
+<h2 id='license' class='heading'>License</h2>
+<pre class="highlight plaintext"><code>STLocationRequest
+Copyright (c) 2018 Sven Tiigi &lt;sven.tiigi@gmail.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright 2018 Sven Tiigi</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
