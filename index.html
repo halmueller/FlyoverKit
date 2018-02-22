@@ -13,7 +13,7 @@
     <a title="FlyoverKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">FlyoverKit Docs</a> (98% documented)</p>
+        <p><a href="index.html">FlyoverKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/SvenTiigi/FlyoverKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -99,22 +99,46 @@
         <section>
           <section class="section">
             
-            <h1 id='flyoverkit' class='heading'>FlyoverKit</h1>
+            <p align="center">
+   <img width="350" src="https://raw.githubusercontent.com/SvenTiigi/FlyoverKit/gh-pages/readMeAssets/FlyoverKitHeader.png" alt="FlyoverKit Header Logo">
+</p>
 
-<p><a href="https://travis-ci.org/SvenTiigi/FlyoverKit"><img src="https://travis-ci.org/SvenTiigi/FlyoverKit.svg?branch=master" alt="Build Status"></a>
-<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat" alt="Swift 4.0"></a>
-<a href="http://cocoapods.org/pods/FlyoverKit"><img src="https://img.shields.io/cocoapods/v/FlyoverKit.svg?style=flat" alt="Version"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
-<a href="https://codebeat.co/projects/github-com-sventiigi-flyoverkit-master"><img src="https://codebeat.co/badges/c170aedf-d49e-4538-be5c-6c2819c8d7f4" alt="codebeat badge"></a>
-<a href="https://sventiigi.github.io/FlyoverKit"><img src="https://github.com/SvenTiigi/FlyoverKit/blob/gh-pages/badge.svg" alt="Documentation"></a>
-<a href="https://twitter.com/SvenTiigi/"><img src="https://img.shields.io/badge/Twitter-@SvenTiigi-blue.svg?style=flat" alt="Twitter"></a></p>
+<p align="center">
+   <a href="https://travis-ci.org/SvenTiigi/FlyoverKit">
+      <img src="https://travis-ci.org/SvenTiigi/FlyoverKit.svg?branch=master" alt="Build Status">
+   </a>
+   <a href="https://developer.apple.com/swift/">
+      <img src="https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat" alt="Swift 4.0">
+   </a>
+   <a href="http://cocoapods.org/pods/FlyoverKit">
+      <img src="https://img.shields.io/cocoapods/v/FlyoverKit.svg?style=flat" alt="Version">
+   </a>
+   <a href="https://github.com/Carthage/Carthage">
+      <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible">
+   </a>
+   <a href="https://codebeat.co/projects/github-com-sventiigi-flyoverkit-master">
+      <img src="https://codebeat.co/badges/c170aedf-d49e-4538-be5c-6c2819c8d7f4" alt="Codebeat">
+   </a>
+   <a href="https://sventiigi.github.io/FlyoverKit">
+      <img src="https://github.com/SvenTiigi/FlyoverKit/blob/gh-pages/badge.svg" alt="Documentation">
+   </a>
+   <a href="https://twitter.com/SvenTiigi/">
+      <img src="https://img.shields.io/badge/Twitter-@SvenTiigi-blue.svg?style=flat" alt="Twitter">
+   </a>
+</p>
 
-<p><code>FlyoverKit</code> enables you to present stunning 360° flyover views in your iOS App with zero effot and 100% configuration options</p>
-<h2 id='example-application' class='heading'>Example Application</h2>
+<p><code>FlyoverKit</code> enables you to present stunning 360° flyover views on a <code>MKMapView</code> with zero effort while maintaining full configuration possibilities.</p>
 
-<p>Try out the <code>FlyoverKitExample</code> application to see <code>FlyoverKit</code> in action and get a brief look of configuration options.</p>
+<p align="center">
+   <img src="https://raw.githubusercontent.com/SvenTiigi/FlyoverKit/gh-pages/readMeAssets/FlyoverKitPreview.gif" alt="Preview GIF" width="500">
+</p>
+<h2 id='flyoverkit-example-app' class='heading'>FlyoverKit Example App</h2>
 
-<p>In order to run the example Application you have to first generate the Frameworks via <code>Carthage</code>.</p>
+<p><img style="float: right" src="https://raw.githubusercontent.com/SvenTiigi/FlyoverKit/gh-pages/readMeAssets/FlyoverKitExampleApplication.png" alt="Example Application Screenshot" align="right" width="300"></p>
+
+<p>The <code>FlyoverKitExample</code> Application is an excellent way to see <code>FlyoverKit</code> in action. You can get a brief look of configuration options and how they change the flyover behaviour. Please keep in mind that the <code>SatelliteFlyover</code> and <code>HybridFlyover</code> will only work on a real iOS device.</p>
+
+<p>In order to run the example Application you have to first generate the Frameworks via <code>Carthage</code></p>
 <pre class="highlight shell"><code><span class="nv">$ </span>carthage update <span class="nt">--platform</span> iOS
 <span class="nv">$ </span>open FlyoverKit.xcodeproj
 </code></pre>
@@ -159,7 +183,7 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 <h3 id='flyovermapview' class='heading'>FlyoverMapView</h3>
 
-<p>If you wish to show MapView which is already preconfigured to perform a flyover on a given location.</p>
+<p>If you wish to show a MapView which is already preconfigured to perform a flyover on a given location.</p>
 <pre class="highlight swift"><code><span class="c1">// Initialize the FlyoverMapView</span>
 <span class="k">let</span> <span class="nv">flyoverMapView</span> <span class="o">=</span> <span class="kt">FlyoverMapView</span><span class="p">()</span>
 
@@ -264,7 +288,11 @@ it, simply add the following line to your Podfile:</p>
 
 <p>An excellent visualization of an <code>MKMapCamera</code> from <a href="http://www.techotopia.com/index.php/An_iOS_9_MapKit_Flyover_Tutorial">TechTopia</a></p>
 
-<p><img src="http://www.techotopia.com/images/5/5b/Ios_9_flyover_camera_diagram.png" alt=""></p>
+<p align="center">
+    <a href="http://www.techotopia.com/index.php/An_iOS_9_MapKit_Flyover_Tutorial">
+        <img src="http://www.techotopia.com/images/5/5b/Ios_9_flyover_camera_diagram.png" alt="Flyover Camera Diagram">
+    </a>
+</p>
 <h3 id='configuration-theme' class='heading'>Configuration Theme</h3>
 
 <p>If you don&rsquo;t want to set the properties yourself your can use a preconfigured configuration theme. Currently there are four themes available </p>
@@ -312,7 +340,7 @@ it, simply add the following line to your Podfile:</p>
 
 <p>Contributions are very welcome 🙌 🤓</p>
 <h2 id='license' class='heading'>License</h2>
-<pre class="highlight plaintext"><code>STLocationRequest
+<pre class="highlight plaintext"><code>FlyoverKit
 Copyright (c) 2018 Sven Tiigi &lt;sven.tiigi@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
