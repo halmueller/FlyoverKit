@@ -1,6 +1,19 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/sventiigi/Development/iOS/FlyoverKit/FlyoverKit/AwesomePlace/FlyoverAwesomePlace.swift",
+      "line": null,
+      "symbol": "FlyoverAwesomePlace",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sventiigi/Development/iOS/FlyoverKit/FlyoverKit/AwesomePlace/FlyoverAwesomePlace.swift",
+      "line": 13,
+      "symbol": "FlyoverAwesomePlace",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/sventiigi/Development/iOS/FlyoverKit"
 }
