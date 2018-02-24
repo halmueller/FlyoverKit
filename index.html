@@ -112,11 +112,11 @@
 </p>
 
 <p align="center">
-   <a href="https://travis-ci.org/SvenTiigi/FlyoverKit">
-      <img src="https://travis-ci.org/SvenTiigi/FlyoverKit.svg?branch=master" alt="Build Status">
-   </a>
    <a href="https://developer.apple.com/swift/">
       <img src="https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat" alt="Swift 4.0">
+   </a>
+   <a href="https://travis-ci.org/SvenTiigi/FlyoverKit">
+      <img src="https://travis-ci.org/SvenTiigi/FlyoverKit.svg?branch=master" alt="Build Status">
    </a>
    <a href="http://cocoapods.org/pods/FlyoverKit">
       <img src="https://img.shields.io/cocoapods/v/FlyoverKit.svg?style=flat" alt="Version">
@@ -127,6 +127,9 @@
    <a href="https://codebeat.co/projects/github-com-sventiigi-flyoverkit-master">
       <img src="https://codebeat.co/badges/c170aedf-d49e-4538-be5c-6c2819c8d7f4" alt="Codebeat">
    </a>
+   <a href="https://codecov.io/gh/SvenTiigi/FlyoverKit">
+        <img src="https://img.shields.io/codecov/c/github/SvenTiigi/FlyoverKit.svg" alt="Coverage">
+    </a>
    <a href="https://sventiigi.github.io/FlyoverKit">
       <img src="https://github.com/SvenTiigi/FlyoverKit/blob/gh-pages/badge.svg" alt="Documentation">
    </a>
@@ -145,18 +148,18 @@
 <p>The <code>FlyoverKitExample</code> Application is an excellent way to see <code>FlyoverKit</code> in action. You can get a brief look of configuration options and how they change the flyover behaviour. Please keep in mind that the <code>SatelliteFlyover</code> and <code>HybridFlyover</code> will only work on a real iOS device.</p>
 
 <p>In order to run the example Application you have to first generate the Frameworks via <a href="https://github.com/Carthage/Carthage">Carthage</a></p>
-<pre class="highlight shell"><code><span class="nv">$ </span>carthage update <span class="nt">--platform</span> iOS
-<span class="nv">$ </span>open FlyoverKit.xcodeproj
+<pre class="highlight shell"><code><span class="gp">$ </span>carthage update --platform iOS
+<span class="gp">$ </span>open FlyoverKit.xcodeproj
 </code></pre>
 
 <p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
-<pre class="highlight shell"><code><span class="nv">$ </span>brew update
-<span class="nv">$ </span>brew <span class="nb">install </span>carthage
+<pre class="highlight shell"><code><span class="gp">$ </span>brew update
+<span class="gp">$ </span>brew install carthage
 </code></pre>
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
-<p>STLocationRequest is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+<p>FlyoverKit is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
 it, simply add the following line to your Podfile:</p>
 <pre class="highlight shell"><code>pod <span class="s1">'FlyoverKit'</span>
 </code></pre>
@@ -164,7 +167,7 @@ it, simply add the following line to your Podfile:</p>
 
 <p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
 
-<p>To integrate STLocationRequest into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<p>To integrate FlyoverKit into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
 <pre class="highlight plaintext"><code>github "SvenTiigi/FlyoverKit"
 </code></pre>
 
