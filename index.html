@@ -180,14 +180,13 @@ it, simply add the following line to your Podfile:</p>
 <h3 id='flyovercamera' class='heading'>FlyoverCamera</h3>
 
 <p>If you already have a <code>MKMapView</code> in your <code>Controller</code> and you want to add a flyover to this MapView, simply use the <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code>.</p>
-<pre class="highlight swift"><code><span class="c1">// Initialize the FlyoverCamera with a MKMapView</span>
-<span class="k">let</span> <span class="nv">flyoverCamera</span> <span class="o">=</span> <span class="kt">FlyoverCamera</span><span class="p">(</span>
-    <span class="nv">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span>
-    <span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span>
-<span class="p">)</span>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">FlyoverKit</span>
 
-<span class="c1">// Initialize a location</span>
-<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2DMake</span><span class="p">(</span><span class="mf">48.858370</span><span class="p">,</span> <span class="mf">2.294481</span><span class="p">)</span>
+<span class="c1">// Initialize the FlyoverCamera with an already existing MKMapView</span>
+<span class="k">let</span> <span class="nv">flyoverCamera</span> <span class="o">=</span> <span class="kt">FlyoverCamera</span><span class="p">(</span><span class="nv">mapView</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">mapView</span><span class="p">)</span>
+
+<span class="c1">// Initialize a location via CLLocationCoordinate2D</span>
+<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">48.858370</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="mf">2.294481</span><span class="p">)</span>
 
 <span class="c1">// Start flyover</span>
 <span class="n">flyoverCamera</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">flyover</span><span class="p">:</span> <span class="n">eiffelTower</span><span class="p">)</span>
@@ -195,11 +194,13 @@ it, simply add the following line to your Podfile:</p>
 <h3 id='flyovermapview' class='heading'>FlyoverMapView</h3>
 
 <p>If you wish to show a MapView which is already preconfigured to perform a flyover on a given location.</p>
-<pre class="highlight swift"><code><span class="c1">// Initialize the FlyoverMapView</span>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">FlyoverKit</span>
+
+<span class="c1">// Initialize the FlyoverMapView</span>
 <span class="k">let</span> <span class="nv">flyoverMapView</span> <span class="o">=</span> <span class="kt">FlyoverMapView</span><span class="p">()</span>
 
-<span class="c1">// Initialize a location</span>
-<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2DMake</span><span class="p">(</span><span class="mf">48.858370</span><span class="p">,</span> <span class="mf">2.294481</span><span class="p">)</span>
+<span class="c1">// Initialize a location via CLLocation</span>
+<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocation</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">48.858370</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="mf">2.294481</span><span class="p">)</span>
 
 <span class="c1">// Start flyover</span>
 <span class="n">flyoverMapView</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">flyover</span><span class="p">:</span> <span class="n">eiffelTower</span><span class="p">)</span>
@@ -207,8 +208,10 @@ it, simply add the following line to your Podfile:</p>
 <h3 id='flyovermapviewcontroller' class='heading'>FlyoverMapViewController</h3>
 
 <p>If you wish to present a <code>UIViewController</code> with an embedded <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> to perform a flyover on a given location.</p>
-<pre class="highlight swift"><code><span class="c1">// Initialize a location</span>
-<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2DMake</span><span class="p">(</span><span class="mf">48.858370</span><span class="p">,</span> <span class="mf">2.294481</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">FlyoverKit</span>
+
+<span class="c1">// Initialize a location via FlyoverAwesomePlace</span>
+<span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">FlyoverAwesomePlace</span><span class="o">.</span><span class="n">parisEiffelTower</span>
 
 <span class="c1">// Initialize the FlyoverMapViewController with a Flyover object</span>
 <span class="k">let</span> <span class="nv">controller</span> <span class="o">=</span> <span class="kt">FlyoverMapViewController</span><span class="p">(</span><span class="nv">flyover</span><span class="p">:</span> <span class="n">eiffelTower</span><span class="p">)</span>
@@ -234,7 +237,7 @@ it, simply add the following line to your Podfile:</p>
 <span class="p">}</span>
 </code></pre>
 
-<p>The <code>FlyoverKit</code> already implemented this protocol to various MapKit and CoreLocation types like <code>CLLocationCoordinate2D</code>, <code>CLLocation</code>, <code>MKMapPoint</code>, <code>MKMapItem</code>, <code>MKCoordinateRegion</code> and many more.</p>
+<p>The <code>FlyoverKit</code> already implemented this protocol to various MapKit and CoreLocation types like <code>CLLocationCoordinate2D</code>, <code>CLLocation</code>, <code>MKMapPoint</code>, <code>MKMapItem</code>, <code>MKCoordinateRegion</code> and many <a href="https://sventiigi.github.io/FlyoverKit/Extensions.html">more</a>.</p>
 
 <p>You can apply the <code><a href="Protocols/Flyover.html">Flyover</a></code> protocol to your own models to use them for a flyover.</p>
 <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Address</span> <span class="p">{</span>
