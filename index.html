@@ -140,12 +140,12 @@
 
 <p><br/></p>
 
-<p><code>FlyoverKit</code> enables you to present stunning 360° flyover views on your <code>MKMapView</code> with zero effort while maintaining full configuration possibilities. <code>FlyoverKit</code> builds the core of <a href="https://github.com/SvenTiigi/STLocationRequest">STLocationRequest</a> which enables you a way to request the user location services via a 3D 360° flyover MapView.</p>
+<p><code>FlyoverKit</code> enables you to present stunning 360° flyover views on an <code>MKMapView</code> with zero effort while maintaining full configuration possibilities. <code>FlyoverKit</code> builds the core of <a href="https://github.com/SvenTiigi/STLocationRequest">STLocationRequest</a> which enables you a way to request the user location services via a 3D 360° flyover MapView.</p>
 <h2 id='example' class='heading'>Example</h2>
 
 <p><img style="float: right" src="https://raw.githubusercontent.com/SvenTiigi/FlyoverKit/gh-pages/readMeAssets/FlyoverKitExampleApplication.gif" alt="Example Application Screenshot" align="right" width="307"></p>
 
-<p>The <code>FlyoverKitExample</code> Application is an excellent way to see <code>FlyoverKit</code> in action. You can get a brief look of configuration options and how they change the flyover behaviour. Please keep in mind that the <code>SatelliteFlyover</code> and <code>HybridFlyover</code> will only work on a real iOS device.</p>
+<p>The <code>FlyoverKitExample</code> Application is an excellent way to see <code>FlyoverKit</code> in action. You get a brief look of the available configuration options and how they affect the flyover behaviour. Please keep in mind that the <code>SatelliteFlyover</code> and <code>HybridFlyover</code> will only work on a real iOS device.</p>
 
 <p>In order to run the example Application you have to first generate the Frameworks via <a href="https://github.com/Carthage/Carthage">Carthage</a></p>
 <pre class="highlight shell"><code><span class="gp">$ </span>carthage update --platform iOS
@@ -176,7 +176,7 @@ it, simply add the following line to your Podfile:</p>
 <p>On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” and add the Framework path as mentioned in <a href="https://github.com/Carthage/Carthage/blob/master/README.md">Carthage Getting started Step 4, 5 and 6</a></p>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p><code>FlyoverKit</code> comes with three ways to implement a flyover. Simply choose the most suitable type for your implementation. Please see the <code>Advanced</code> section in order to configure the <code>FlyoverKit</code> to your needs.</p>
+<p><code>FlyoverKit</code> can be implemented in three different ways. Simply choose the most suitable type for your implementation. Please see the <a href="https://github.com/SvenTiigi/FlyoverKit#advanced">Advanced</a> section in order to configure the <code>FlyoverKit</code> to your needs.</p>
 <h3 id='flyovercamera' class='heading'>FlyoverCamera</h3>
 
 <p>If you already have a <code>MKMapView</code> in your <code>Controller</code> and you want to add a flyover to this MapView, simply use the <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code>.</p>
@@ -193,7 +193,7 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 <h3 id='flyovermapview' class='heading'>FlyoverMapView</h3>
 
-<p>If you wish to show a MapView which is already preconfigured to perform a flyover on a given location.</p>
+<p>If you wish to show a MapView which is already preconfigured to perform a flyover on a given location, you should use the <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code>.</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">FlyoverKit</span>
 
 <span class="c1">// Initialize the FlyoverMapView</span>
@@ -207,7 +207,7 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 <h3 id='flyovermapviewcontroller' class='heading'>FlyoverMapViewController</h3>
 
-<p>If you wish to present a <code>UIViewController</code> with an embedded <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> to perform a flyover on a given location.</p>
+<p>If you wish to present a <code>UIViewController</code> with an embedded <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> to perform a flyover on a given location, <code><a href="Classes/FlyoverMapViewController.html">FlyoverMapViewController</a></code> is at your service.</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">FlyoverKit</span>
 
 <span class="c1">// Initialize a location via FlyoverAwesomePlace</span>
@@ -248,10 +248,10 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 <h3 id='flyoverawesomeplace' class='heading'>FlyoverAwesomePlace</h3>
 
-<p>The <code><a href="Enums/FlyoverAwesomePlace.html">FlyoverAwesomePlace</a></code> is <code><a href="Protocols/Flyover.html">Flyover</a></code> protocol compliant Enumeration with awesome 360° locations and landmarks like <code>NewYorkStatueOfLiberty</code>, <code>GooglePlex</code>, <code>SydneyOperaHouse</code> and many <a href="https://github.com/SvenTiigi/FlyoverKit/blob/master/FlyoverKit/AwesomePlace/FlyoverAwesomePlace.swift">more</a>. You can use them in your own implementation or to explore different locations in the <code>FlyoverKitExample</code> Application.</p>
+<p>The <code><a href="Enums/FlyoverAwesomePlace.html">FlyoverAwesomePlace</a></code> is a <code><a href="Protocols/Flyover.html">Flyover</a></code> protocol compliant Enumeration with awesome locations and landmarks like <code>NewYorkStatueOfLiberty</code>, <code>GooglePlex</code>, <code>SydneyOperaHouse</code> and many <a href="https://github.com/SvenTiigi/FlyoverKit/blob/master/FlyoverKit/AwesomePlace/FlyoverAwesomePlace.swift">more</a>. You can use them in your own implementation or to explore different locations in the <code>FlyoverKitExample</code> Application.</p>
 <h2 id='flyovercamera' class='heading'>FlyoverCamera</h2>
 
-<p>The <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> is responsible for manipulating the orginal <code>MKMapView</code> camera and performs a 360° flyover animation via <a href="https://developer.apple.com/documentation/uikit/uiviewpropertyanimator">UIViewPropertyAnimator</a>. </p>
+<p>The <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> is responsible for manipulating the <code>MKMapView</code> camera and performs a 360° flyover animation via <a href="https://developer.apple.com/documentation/uikit/uiviewpropertyanimator">UIViewPropertyAnimator</a>. </p>
 
 <p>In order to initialize a <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> object you need to pass a <code>MKMapView</code> (which reference will be weakly stored) and a <code><a href="Classes/FlyoverCamera/Configuration.html">FlyoverCamera.Configuration</a></code> object.</p>
 <pre class="highlight swift"><code><span class="c1">// Initialize FlyoverCamera configuration</span>
@@ -312,7 +312,7 @@ it, simply add the following line to your Podfile:</p>
 </p>
 <h3 id='configuration-theme' class='heading'>Configuration Theme</h3>
 
-<p>If you don&rsquo;t want to set the properties yourself your can use a preconfigured configuration theme. Currently there are four themes available </p>
+<p>If you don&rsquo;t want to set the properties yourself you can use a preconfigured configuration theme. Currently there are four themes available </p>
 
 <table><thead>
 <tr>
@@ -349,7 +349,7 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 <h2 id='flyovermapview' class='heading'>FlyoverMapView</h2>
 
-<p>The <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> is a preconfigured <code>MKMapView</code> with an embedded <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code>. The <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> offers various convenience functions for example starting a flyover with a <code>MKAnnotation</code> object or setting a supported Flyover <code>MapType</code>.</p>
+<p>The <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> is a preconfigured <code>MKMapView</code> with an embedded <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code>. The <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> offers various convenience functions for example starting a flyover with a <code>MKAnnotation</code> object or setting a supported flyover <code>MapType</code>.</p>
 <pre class="highlight swift"><code><span class="c1">// Initialize with default configuration theme and standard MapType</span>
 <span class="k">let</span> <span class="nv">flyoverMapView</span> <span class="o">=</span> <span class="kt">FlyoverMapView</span><span class="p">()</span>
 
@@ -381,7 +381,7 @@ it, simply add the following line to your Podfile:</p>
 </tbody></table>
 <h3 id='flyovermapviewcontroller' class='heading'>FlyoverMapViewController</h3>
 
-<p>The <code><a href="Classes/FlyoverMapViewController.html">FlyoverMapViewController</a></code> is an easy and simple way to just present a <code>UIViewController</code> with an embedded <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code>. You can use it if you just want to present a 360° flyover on a given <code><a href="Protocols/Flyover.html">Flyover</a></code> type.</p>
+<p>The <code><a href="Classes/FlyoverMapViewController.html">FlyoverMapViewController</a></code> is an easy and simple way to present a <code>UIViewController</code> with an embedded <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code>. You can use it if you just want to present a 360° flyover on a given <code><a href="Protocols/Flyover.html">Flyover</a></code> type.</p>
 <pre class="highlight swift"><code><span class="c1">// Initialize a location</span>
 <span class="k">let</span> <span class="nv">eiffelTower</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2DMake</span><span class="p">(</span><span class="mf">48.858370</span><span class="p">,</span> <span class="mf">2.294481</span><span class="p">)</span>
 
