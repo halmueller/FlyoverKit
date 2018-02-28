@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RegionChangeAnimation Enumeration Reference</title>
+    <title>State Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/RegionChangeAnimation" class="dashAnchor"></a>
-    <a title="RegionChangeAnimation Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/State" class="dashAnchor"></a>
+    <a title="State Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html">FlyoverKit Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html">FlyoverKit Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        RegionChangeAnimation Enumeration Reference
+        State Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -110,15 +110,19 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>RegionChangeAnimation</h1>
+            <h1>State</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RegionChangeAnimation</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">State</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                 </div>
               </div>
-            <p>The RegionChangeAnimation Enum specifies if the
-switch/transition to a new coordinate should be animated or not</p>
+            <p>The FlyoverCamera State</p>
+
+<ul>
+<li>started: The FlyoverCamera is started and running</li>
+<li>stopped: The FlyoverCamera is stopped (Initial-Value)</li>
+</ul>
 
           </section>
           <section class="section task-group-section">
@@ -127,9 +131,9 @@ switch/transition to a new coordinate should be animated or not</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC21RegionChangeAnimationO4noneA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/none" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC21RegionChangeAnimationO4noneA2EmF">none</a>
+                    <a name="/s:10FlyoverKit0A6CameraC5StateO7startedA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/started" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5StateO7startedA2EmF">started</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -137,14 +141,14 @@ switch/transition to a new coordinate should be animated or not</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>No animation should be applied</p>
+                        <p>Started</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">started</span></code></pre>
 
                         </div>
                       </div>
@@ -158,9 +162,9 @@ switch/transition to a new coordinate should be animated or not</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC21RegionChangeAnimationO8animatedAESd8duration_SC06UIViewF5CurveO5curvetcAEmF"></a>
-                    <a name="//apple_ref/swift/Element/animated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC21RegionChangeAnimationO8animatedAESd8duration_SC06UIViewF5CurveO5curvetcAEmF">animated</a>
+                    <a name="/s:10FlyoverKit0A6CameraC5StateO7stoppedA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/stopped" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5StateO7stoppedA2EmF">stopped</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -168,15 +172,14 @@ switch/transition to a new coordinate should be animated or not</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Animation with given TimeInterval and AnimationCurve
-should be performed</p>
+                        <p>Stopped</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">animated</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">curve</span><span class="p">:</span> <span class="kt">UIViewAnimationCurve</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">stopped</span></code></pre>
 
                         </div>
                       </div>

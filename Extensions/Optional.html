@@ -41,6 +41,9 @@
                 <a href="../Classes/FlyoverCamera/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/FlyoverCamera/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/FlyoverMapView.html">FlyoverMapView</a>
               </li>
               <li class="nav-group-task">
@@ -179,6 +182,134 @@ via rounding the latitude and longitude to avoid float comparison</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Boolean if the two coordinates are nearly the same</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sq10FlyoverKitAA0A0_pRszlE2eeoiSbAaB_pSg_ADtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq10FlyoverKitAA0A0_pRszlE2eeoiSbAaB_pSg_ADtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compare two given Flyover types</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Flyover.html">Flyover</a></span><span class="p">?,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Flyover.html">Flyover</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The left hand side</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The right hand side</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Boolean if the two given Flyover&rsquo;s are exactly equal</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sq10FlyoverKitAA0A0_pRszlE2ttoiSbAaB_pSg_ADtFZ"></a>
+                    <a name="//apple_ref/swift/Method/~~(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq10FlyoverKitAA0A0_pRszlE2ttoiSbAaB_pSg_ADtFZ">~~(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compare two given Flyover types via rounded latitude and longitude comparison</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="o">~~</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Flyover.html">Flyover</a></span><span class="p">?,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Flyover.html">Flyover</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The left hand side</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The right hand side</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Boolean if the two given Flyover&rsquo;s are nearly equal (rounded)</p>
                       </div>
                     </section>
                   </div>

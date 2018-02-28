@@ -41,6 +41,9 @@
                 <a href="../Classes/FlyoverCamera/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/FlyoverCamera/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/FlyoverMapView.html">FlyoverMapView</a>
               </li>
               <li class="nav-group-task">
@@ -157,9 +160,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC9isStartedSbv"></a>
-                    <a name="//apple_ref/swift/Property/isStarted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC9isStartedSbv">isStarted</a>
+                    <a name="/s:10FlyoverKit0A6CameraC5stateAC5StateOv"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5stateAC5StateOv">state</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -167,14 +170,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Retrieve boolean if flyover has been started and is active</p>
+                        <p>Retrieve FlyoverCamera State</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">isStarted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlyoverCamera/State.html">State</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10FlyoverKit0A6CameraC5curveSC20UIViewAnimationCurveOv"></a>
+                    <a name="//apple_ref/swift/Property/curve" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5curveSC20UIViewAnimationCurveOv">curve</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The animation curve</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">curve</span><span class="p">:</span> <span class="kt">UIViewAnimationCurve</span> <span class="o">=</span> <span class="o">.</span><span class="n">linear</span></code></pre>
 
                         </div>
                       </div>
@@ -249,9 +279,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC5curveSC20UIViewAnimationCurveOv"></a>
-                    <a name="//apple_ref/swift/Property/curve" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5curveSC20UIViewAnimationCurveOv">curve</a>
+                    <a name="/s:10FlyoverKit0A6CameraC7flyover33_1195F1FC44CA75A89A27BB0302C969CFLLAA0A0_pSgv"></a>
+                    <a name="//apple_ref/swift/Property/flyover" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC7flyover33_1195F1FC44CA75A89A27BB0302C969CFLLAA0A0_pSgv">flyover</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -259,41 +289,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The animation curve</p>
+                        <p>The flyover</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">curve</span><span class="p">:</span> <span class="kt">UIViewAnimationCurve</span> <span class="o">=</span> <span class="o">.</span><span class="n">linear</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10FlyoverKit0A6CameraC10coordinate33_1195F1FC44CA75A89A27BB0302C969CFLLSC22CLLocationCoordinate2DVSgv"></a>
-                    <a name="//apple_ref/swift/Property/coordinate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC10coordinate33_1195F1FC44CA75A89A27BB0302C969CFLLSC22CLLocationCoordinate2DVSgv">coordinate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The current coordinate</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">flyover</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Flyover.html">Flyover</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -579,9 +582,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLySC22CLLocationCoordinate2DVSgF"></a>
+                    <a name="/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLyAA0A0_pSgF"></a>
                     <a name="//apple_ref/swift/Method/performFlyover(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLySC22CLLocationCoordinate2DVSgF">performFlyover(_:)</a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLyAA0A0_pSgF">performFlyover(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -589,14 +592,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Perform flyover at the given coordinate</p>
+                        <p>Perform flyover at the given Flyover coordinate</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">performFlyover</span><span class="p">(</span><span class="n">_</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">performFlyover</span><span class="p">(</span><span class="n">_</span> <span class="nv">flyover</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Flyover.html">Flyover</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -607,17 +610,71 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>coordinate</em>
+                                <em>flyover</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The coordinate</p>
+                                  <p>The Flyover object</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10FlyoverKit0A6CameraC27applicationWillResignActive33_1195F1FC44CA75A89A27BB0302C969CFLLyyF"></a>
+                    <a name="//apple_ref/swift/Method/applicationWillResignActive()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC27applicationWillResignActive33_1195F1FC44CA75A89A27BB0302C969CFLLyyF">applicationWillResignActive()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UIApplicationWillResignActive notification handler</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">private</span> <span class="kd">func</span> <span class="nf">applicationWillResignActive</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10FlyoverKit0A6CameraC26applicationDidBecomeActive33_1195F1FC44CA75A89A27BB0302C969CFLLyyF"></a>
+                    <a name="//apple_ref/swift/Method/applicationDidBecomeActive()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC26applicationDidBecomeActive33_1195F1FC44CA75A89A27BB0302C969CFLLyyF">applicationDidBecomeActive()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UIApplicationDidBecomeActive notification handler</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">private</span> <span class="kd">func</span> <span class="nf">applicationDidBecomeActive</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -681,6 +738,43 @@ switch/transition to a new coordinate should be animated or not</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10FlyoverKit0A6CameraC5StateO"></a>
+                    <a name="//apple_ref/swift/Enum/State" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5StateO">State</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The FlyoverCamera State</p>
+
+<ul>
+<li>started: The FlyoverCamera is started and running</li>
+<li>stopped: The FlyoverCamera is stopped (Initial-Value)</li>
+</ul>
+
+                        <a href="../Classes/FlyoverCamera/State.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">State</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>

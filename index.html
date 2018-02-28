@@ -40,6 +40,9 @@
                 <a href="Classes/FlyoverCamera/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/FlyoverCamera/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/FlyoverMapView.html">FlyoverMapView</a>
               </li>
               <li class="nav-group-task">
@@ -161,14 +164,14 @@
 
 <p>FlyoverKit is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
 it, simply add the following line to your Podfile:</p>
-<pre class="highlight shell"><code>pod <span class="s1">'FlyoverKit'</span>
+<pre class="highlight shell"><code>pod <span class="s1">'FlyoverKit'</span>, <span class="s1">'~&gt; 1.0.0'</span>
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
 <p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
 
 <p>To integrate FlyoverKit into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "SvenTiigi/FlyoverKit"
+<pre class="highlight plaintext"><code>github "SvenTiigi/FlyoverKit" ~&gt; 1.0.0
 </code></pre>
 
 <p>Run <code>carthage update --platform iOS</code> to build the framework and drag the built <code>FlyoverKit.framework</code> into your Xcode project. </p>
@@ -246,6 +249,19 @@ it, simply add the following line to your Podfile:</p>
 <span class="p">}</span>
 <span class="kd">extension</span> <span class="kt">Address</span><span class="p">:</span> <span class="kt">Flyover</span> <span class="p">{}</span>
 </code></pre>
+<h3 id='operators' class='heading'>Operators</h3>
+
+<p>In order to compare two <code><a href="Protocols/Flyover.html">Flyover</a></code> types you can use the following two operators.</p>
+<pre class="highlight swift"><code><span class="c1">// Equatable operator (==)</span>
+<span class="k">self</span><span class="o">.</span><span class="n">flyover1</span> <span class="o">==</span> <span class="k">self</span><span class="o">.</span><span class="n">flyover2</span>
+</code></pre>
+
+<p>This checks if the two given <code><a href="Protocols/Flyover.html">Flyover</a></code> types are exactly the same via comparison of latitude and longitude.</p>
+<pre class="highlight swift"><code><span class="c1">// Rounded Equatable operator (~~)</span>
+<span class="k">self</span><span class="o">.</span><span class="n">flyover1</span> <span class="o">~~</span> <span class="k">self</span><span class="o">.</span><span class="n">flyover2</span>
+</code></pre>
+
+<p>This checks if the two given <code><a href="Protocols/Flyover.html">Flyover</a></code> types are nearly the same via comparison of rounded latitude and longitude.</p>
 <h3 id='flyoverawesomeplace' class='heading'>FlyoverAwesomePlace</h3>
 
 <p>The <code><a href="Enums/FlyoverAwesomePlace.html">FlyoverAwesomePlace</a></code> is a <code><a href="Protocols/Flyover.html">Flyover</a></code> protocol compliant Enumeration with awesome locations and landmarks like <code>NewYorkStatueOfLiberty</code>, <code>GooglePlex</code>, <code>SydneyOperaHouse</code> and many <a href="https://github.com/SvenTiigi/FlyoverKit/blob/master/FlyoverKit/AwesomePlace/FlyoverAwesomePlace.swift">more</a>. You can use them in your own implementation or to explore different locations in the <code>FlyoverKitExample</code> Application.</p>
