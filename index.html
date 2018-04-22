@@ -34,10 +34,10 @@
                 <a href="Classes/FlyoverCamera.html">FlyoverCamera</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/FlyoverCamera/RegionChangeAnimation.html">– RegionChangeAnimation</a>
+                <a href="Classes/FlyoverCamera/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/FlyoverCamera/Configuration.html">– Configuration</a>
+                <a href="Classes/FlyoverCamera/RegionChangeAnimation.html">– RegionChangeAnimation</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/FlyoverCamera/State.html">– State</a>
@@ -130,6 +130,9 @@
    <a href="https://github.com/Carthage/Carthage">
       <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible">
    </a>
+   <a href="http://cocoapods.org/pods/FlyoverKit">
+      <img src="https://img.shields.io/cocoapods/p/FlyoverKit.svg?style=flat" alt="Platform">
+   </a>
    <a href="https://codebeat.co/projects/github-com-sventiigi-flyoverkit-master">
       <img src="https://codebeat.co/badges/c170aedf-d49e-4538-be5c-6c2819c8d7f4" alt="Codebeat">
    </a>
@@ -151,17 +154,7 @@
 
 <p><img style="float: right" src="https://raw.githubusercontent.com/SvenTiigi/FlyoverKit/gh-pages/readMeAssets/FlyoverKitExampleApplication.gif" alt="Example Application Screenshot" align="right" width="307"></p>
 
-<p>The <code>FlyoverKitExample</code> Application is an excellent way to see <code>FlyoverKit</code> in action. You get a brief look of the available configuration options and how they affect the flyover behaviour. Please keep in mind that the <code>SatelliteFlyover</code> and <code>HybridFlyover</code> will only work on a real iOS device.</p>
-
-<p>In order to run the example Application you have to first generate the Frameworks via <a href="https://github.com/Carthage/Carthage">Carthage</a></p>
-<pre class="highlight shell"><code><span class="gp">$ </span>carthage update --platform iOS
-<span class="gp">$ </span>open FlyoverKit.xcodeproj
-</code></pre>
-
-<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>brew update
-<span class="gp">$ </span>brew install carthage
-</code></pre>
+<p>The example Application is an excellent way to see <code>FlyoverKit</code> in action. You get a brief look of the available configuration options and how they affect the flyover behaviour. Simply open the <code>FlyoverKit.xcodeproj</code> and run the <code>FlyoverKit-Example</code> scheme. Please keep in mind that the <code>SatelliteFlyover</code> and <code>HybridFlyover</code> will only work on a real iOS device.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
@@ -180,6 +173,9 @@ it, simply add the following line to your Podfile:</p>
 <p>Run <code>carthage update --platform iOS</code> to build the framework and drag the built <code>FlyoverKit.framework</code> into your Xcode project. </p>
 
 <p>On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” and add the Framework path as mentioned in <a href="https://github.com/Carthage/Carthage/blob/master/README.md">Carthage Getting started Step 4, 5 and 6</a></p>
+<h3 id='manually' class='heading'>Manually</h3>
+
+<p>If you prefer not to use any of the aforementioned dependency managers, you can integrate FlyoverKit into your project manually. Simply drag the <code>Sources</code> Folder into your Xcode project.</p>
 <h2 id='usage' class='heading'>Usage</h2>
 
 <p><code>FlyoverKit</code> can be implemented in three different ways. Simply choose the most suitable type for your implementation. Please see the <a href="https://github.com/SvenTiigi/FlyoverKit#advanced">Advanced</a> section in order to configure the <code>FlyoverKit</code> to your needs.</p>
@@ -255,19 +251,23 @@ it, simply add the following line to your Podfile:</p>
 <h3 id='operators' class='heading'>Operators</h3>
 
 <p>In order to compare two <code><a href="Protocols/Flyover.html">Flyover</a></code> types you can use the following two operators.</p>
-<pre class="highlight swift"><code><span class="c1">// Equatable operator (==)</span>
-<span class="k">self</span><span class="o">.</span><span class="n">flyover1</span> <span class="o">==</span> <span class="k">self</span><span class="o">.</span><span class="n">flyover2</span>
+<h4 id='equatable-operator' class='heading'>Equatable operator (==)</h4>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">flyover1</span> <span class="o">==</span> <span class="k">self</span><span class="o">.</span><span class="n">flyover2</span>
 </code></pre>
 
-<p>This checks if the two given <code><a href="Protocols/Flyover.html">Flyover</a></code> types are exactly the same via comparison of latitude and longitude.</p>
-<pre class="highlight swift"><code><span class="c1">// Rounded Equatable operator (~~)</span>
-<span class="k">self</span><span class="o">.</span><span class="n">flyover1</span> <span class="o">~~</span> <span class="k">self</span><span class="o">.</span><span class="n">flyover2</span>
+<blockquote>
+<p>Checks if the two given Flyover types are exactly the same via comparison of latitude and longitude.</p>
+</blockquote>
+<h4 id='rounded-equatable-operator' class='heading'>Rounded Equatable operator (~~)</h4>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">flyover1</span> <span class="o">~~</span> <span class="k">self</span><span class="o">.</span><span class="n">flyover2</span>
 </code></pre>
 
-<p>This checks if the two given <code><a href="Protocols/Flyover.html">Flyover</a></code> types are nearly the same via comparison of rounded latitude and longitude.</p>
+<blockquote>
+<p>Checks if the two given Flyover types are nearly the same via comparison of rounded latitude and longitude.</p>
+</blockquote>
 <h3 id='flyoverawesomeplace' class='heading'>FlyoverAwesomePlace</h3>
 
-<p>The <code><a href="Enums/FlyoverAwesomePlace.html">FlyoverAwesomePlace</a></code> is a <code><a href="Protocols/Flyover.html">Flyover</a></code> protocol compliant Enumeration with awesome locations and landmarks like <code>NewYorkStatueOfLiberty</code>, <code>GooglePlex</code>, <code>SydneyOperaHouse</code> and many <a href="https://github.com/SvenTiigi/FlyoverKit/blob/master/FlyoverKit/AwesomePlace/FlyoverAwesomePlace.swift">more</a>. You can use them in your own implementation or to explore different locations in the <code>FlyoverKitExample</code> Application.</p>
+<p>The <code><a href="Enums/FlyoverAwesomePlace.html">FlyoverAwesomePlace</a></code> is a <code><a href="Protocols/Flyover.html">Flyover</a></code> protocol compliant Enumeration with awesome locations and landmarks like <code>NewYorkStatueOfLiberty</code>, <code>GooglePlex</code>, <code>SydneyOperaHouse</code> and many <a href="https://sventiigi.github.io/FlyoverKit/Enums/FlyoverAwesomePlace.html">more</a>. You can use them in your own implementation or to explore different locations in the <code>FlyoverKitExample</code> Application.</p>
 <h2 id='flyovercamera' class='heading'>FlyoverCamera</h2>
 
 <p>The <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> is responsible for manipulating the <code>MKMapView</code> camera and performs a 360° flyover animation via <a href="https://developer.apple.com/documentation/uikit/uiviewpropertyanimator">UIViewPropertyAnimator</a>. </p>
@@ -361,15 +361,15 @@ it, simply add the following line to your Podfile:</p>
 </tr>
 </tbody></table>
 
-<p>More themes coming soon&hellip; 👨‍💻</p>
-
 <p>Furthermore, you can initialize a <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code> with a given <code>Theme</code>.</p>
 <pre class="highlight swift"><code><span class="c1">// Initialize FlyoverCamera</span>
 <span class="k">let</span> <span class="nv">camera</span> <span class="o">=</span> <span class="kt">FlyoverCamera</span><span class="p">(</span>
     <span class="nv">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span>
-    <span class="nv">configurationTheme</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span>
 <span class="p">)</span>
 </code></pre>
+
+<p>More themes coming soon&hellip; 👨‍💻</p>
 <h2 id='flyovermapview' class='heading'>FlyoverMapView</h2>
 
 <p>The <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> is a preconfigured <code>MKMapView</code> with an embedded <code><a href="Classes/FlyoverCamera.html">FlyoverCamera</a></code>. The <code><a href="Classes/FlyoverMapView.html">FlyoverMapView</a></code> offers various convenience functions for example starting a flyover with a <code>MKAnnotation</code> object or setting a supported flyover <code>MapType</code>.</p>
@@ -377,7 +377,7 @@ it, simply add the following line to your Podfile:</p>
 <span class="k">let</span> <span class="nv">flyoverMapView</span> <span class="o">=</span> <span class="kt">FlyoverMapView</span><span class="p">()</span>
 
 <span class="c1">// Or initialize by setting a different theme and the satelliteFlyover MapType</span>
-<span class="k">let</span> <span class="nv">flyoverMapView</span> <span class="o">=</span> <span class="kt">FlyoverMapView</span><span class="p">(</span><span class="nv">configurationTheme</span><span class="p">:</span> <span class="o">.</span><span class="n">farAway</span><span class="p">,</span> <span class="nv">mapType</span><span class="p">:</span> <span class="o">.</span><span class="n">satelliteFlyover</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">flyoverMapView</span> <span class="o">=</span> <span class="kt">FlyoverMapView</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="o">.</span><span class="n">farAway</span><span class="p">,</span> <span class="nv">mapType</span><span class="p">:</span> <span class="o">.</span><span class="n">satelliteFlyover</span><span class="p">)</span>
 </code></pre>
 <h3 id='maptype' class='heading'>MapType</h3>
 
