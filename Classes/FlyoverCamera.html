@@ -84,9 +84,6 @@
                 <a href="../Extensions/MKMapItem.html">MKMapItem</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/MKMapPoint.html">MKMapPoint</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/MKMapRect.html">MKMapRect</a>
               </li>
               <li class="nav-group-task">
@@ -153,7 +150,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlyoverCamera/Configuration.html">Configuration</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlyoverCamera/Configuration.html">Configuration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -190,9 +187,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC5curveSC20UIViewAnimationCurveOvp"></a>
+                    <a name="/s:10FlyoverKit0A6CameraC5curveSo20UIViewAnimationCurveVvp"></a>
                     <a name="//apple_ref/swift/Property/curve" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5curveSC20UIViewAnimationCurveOvp">curve</a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5curveSo20UIViewAnimationCurveVvp">curve</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -207,7 +204,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">curve</span><span class="p">:</span> <span class="kt">UIViewAnimationCurve</span> <span class="o">=</span> <span class="o">.</span><span class="n">linear</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">curve</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">.</span><span class="kt">AnimationCurve</span></code></pre>
 
                         </div>
                       </div>
@@ -272,7 +269,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">mapCamera</span><span class="p">:</span> <span class="kt">MKMapCamera</span> <span class="o">=</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">mapCamera</span><span class="p">:</span> <span class="kt">MKMapCamera</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -347,9 +344,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraCACSo9MKMapViewC03mapE0_AC13ConfigurationV13configurationtcfc"></a>
+                    <a name="/s:10FlyoverKit0A6CameraC7mapView13configurationACSo05MKMapE0C_AC13ConfigurationVtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(mapView:configuration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraCACSo9MKMapViewC03mapE0_AC13ConfigurationV13configurationtcfc">init(mapView:configuration:)</a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC7mapView13configurationACSo05MKMapE0C_AC13ConfigurationVtcfc">init(mapView:configuration:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -443,9 +440,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC5startyAA0A0_p7flyover_tF"></a>
+                    <a name="/s:10FlyoverKit0A6CameraC5start7flyoveryAA0A0_p_tF"></a>
                     <a name="//apple_ref/swift/Method/start(flyover:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5startyAA0A0_p7flyover_tF">start(flyover:)</a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC5start7flyoveryAA0A0_p_tF">start(flyover:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -527,9 +524,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLyAA0A0_pSgF"></a>
+                    <a name="/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLyyAA0A0_pSgF"></a>
                     <a name="//apple_ref/swift/Method/performFlyover(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLyAA0A0_pSgF">performFlyover(_:)</a>
+                    <a class="token" href="#/s:10FlyoverKit0A6CameraC07performA033_1195F1FC44CA75A89A27BB0302C969CFLLyyAA0A0_pSgF">performFlyover(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -590,7 +587,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">private</span> <span class="kd">func</span> <span class="nf">applicationWillResignActive</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">private</span> <span class="kd">func</span> <span class="nf">applicationWillResignActive</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -617,7 +615,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">private</span> <span class="kd">func</span> <span class="nf">applicationDidBecomeActive</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">private</span> <span class="kd">func</span> <span class="nf">applicationDidBecomeActive</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -627,6 +626,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Configuration"></a>
+                <a name="//apple_ref/swift/Section/Configuration" class="dashAnchor"></a>
+                <a href="#/Configuration">
+                  <h3 class="section-name">Configuration</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -719,7 +725,7 @@ switch/transition to a new coordinate should be animated or not</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">State</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">State</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -732,7 +738,7 @@ switch/transition to a new coordinate should be animated or not</p>
         </section>
         <section id="footer">
           <p>Copyright 2018 Sven Tiigi</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
