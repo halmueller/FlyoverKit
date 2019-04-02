@@ -113,7 +113,7 @@
             <h1>Configuration</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Configuration</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
 
                 </div>
               </div>
@@ -278,8 +278,11 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">altitude</span><span class="p">:</span> <span class="kt">CLLocationDistance</span><span class="p">,</span> <span class="nv">pitch</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
-            <span class="nv">headingStep</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">regionChangeAnimation</span><span class="p">:</span> <span class="kt"><a href="../../Classes/FlyoverCamera/RegionChangeAnimation.html">RegionChangeAnimation</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span>
+            <span class="nv">altitude</span><span class="p">:</span> <span class="kt">CLLocationDistance</span><span class="p">,</span>
+            <span class="nv">pitch</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+            <span class="nv">headingStep</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+            <span class="nv">regionChangeAnimation</span><span class="p">:</span> <span class="kt"><a href="../../Classes/FlyoverCamera/RegionChangeAnimation.html">RegionChangeAnimation</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -343,50 +346,12 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The region change animation</p>
+                                  <p>The region change animation. Default value <code>none</code></p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Configuration%20Equatable%20Extension"></a>
-                <a name="//apple_ref/swift/Section/Configuration Equatable Extension" class="dashAnchor"></a>
-                <a href="#/Configuration%20Equatable%20Extension">
-                  <h3 class="section-name">Configuration Equatable Extension</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10FlyoverKit0A6CameraC13ConfigurationV2eeoiySbAE_AEtFZ"></a>
-                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10FlyoverKit0A6CameraC13ConfigurationV2eeoiySbAE_AEtFZ">==(_:_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a Boolean value indicating whether two Configurations are equal.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt"><a href="../../Classes/FlyoverCamera.html">FlyoverCamera</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt"><a href="../../Classes/FlyoverCamera.html">FlyoverCamera</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -543,7 +508,7 @@
         </section>
         <section id="footer">
           <p>Copyright 2018 Sven Tiigi</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
