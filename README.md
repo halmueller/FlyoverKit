@@ -6,9 +6,9 @@
     <a href="https://developer.apple.com/swift/">
         <img src="https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat" alt="Swift 5.0">
     </a>
-    <a href="https://travis-ci.org/SvenTiigi/FlyoverKit">
-        <img src="https://travis-ci.org/SvenTiigi/FlyoverKit.svg?branch=master" alt="Build Status">
-    </a>
+    <a href="https://github.com/SvenTiigi/FlyoverKit/actions?query=workflow%3ACI">
+      <img src="https://github.com/SvenTiigi/FlyoverKit/workflows/CI/badge.svg" alt="CI Status">
+   </a>
     <a href="http://cocoapods.org/pods/FlyoverKit">
         <img src="https://img.shields.io/cocoapods/v/FlyoverKit.svg?style=flat" alt="Version">
     </a>
@@ -17,10 +17,6 @@
     </a>
     <a href="http://cocoapods.org/pods/FlyoverKit">
         <img src="https://img.shields.io/cocoapods/p/FlyoverKit.svg?style=flat" alt="Platform">
-    </a>
-    <br/>
-    <a href="https://codeclimate.com/github/SvenTiigi/FlyoverKit/maintainability">
-        <img src="https://api.codeclimate.com/v1/badges/67fab45d0f3b1d232e67/maintainability" alt="Maintainability">
     </a>
     <a href="https://sventiigi.github.io/FlyoverKit">
         <img src="https://github.com/SvenTiigi/FlyoverKit/blob/gh-pages/badge.svg" alt="Documentation">
@@ -64,6 +60,16 @@ github "SvenTiigi/FlyoverKit"
 Run `carthage update --platform iOS` to build the framework and drag the built `FlyoverKit.framework` into your Xcode project. 
 
 On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” and add the Framework path as mentioned in [Carthage Getting started Step 4, 5 and 6](https://github.com/Carthage/Carthage/blob/master/README.md)
+
+### Swift Package Manager
+
+To integrate using Apple's [Swift Package Manager](https://swift.org/package-manager/), add the following as a dependency to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/SvenTiigi/FlyoverKit.git", from: "1.3.1")
+]
+```
 
 ### Manually
 
@@ -301,7 +307,7 @@ Contributions are very welcome 🙌 🤓
 
 ```
 FlyoverKit
-Copyright (c) 2019 Sven Tiigi <sven.tiigi@gmail.com>
+Copyright (c) 2020 Sven Tiigi <sven.tiigi@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
